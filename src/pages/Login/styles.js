@@ -21,6 +21,10 @@ export const Container = styled.div`
     border-radius: 5px;
     font-size: 16px;
   }
+
+  a {
+    margin-top: 2vh;
+  }
 `;
 
 export const Content = styled.div`

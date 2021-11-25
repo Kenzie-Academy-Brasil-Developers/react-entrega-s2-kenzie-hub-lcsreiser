@@ -4,8 +4,8 @@ export const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  width: 100%;
 
   h1 {
     font-weight: 700;
@@ -21,11 +21,17 @@ export const Container = styled.div`
     border-radius: 5px;
     font-size: 16px;
   }
+
+  a {
+    margin-top: 2vh;
+    padding-bottom: 15px;
+  }
 `;
 
 export const Content = styled.div`
   border: 1px solid var(--grey0);
   width: 90vw;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,6 +47,7 @@ export const Content = styled.div`
   button {
     margin-top: 5vh;
     margin-bottom: 5vh;
+    max-width: 250px;
   }
 
   p {
