@@ -7,6 +7,7 @@ export const Container = styled.button`
   border: none;
   width: 80vw;
   height: 7vh;
+  max-width: 400px;
   :hover {
     border: 2px solid var(--purple);
   }

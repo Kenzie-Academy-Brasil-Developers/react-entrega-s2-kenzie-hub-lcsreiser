@@ -28,9 +28,14 @@ const Login = ({ authenticated, setAuthenticated }) => {
       .post("/sessions", data)
       .then((response) => {
         console.log(response.data);
-        const { token } = response.data;
 
-        localStorage.setItem("@kenziHub:token", JSON.stringify(token));
+        const { token } = response.data;
+        const { user } = response.data;
+
+        localStorage.clear();
+
+        localStorage.setItem("@kenzieHub:token", JSON.stringify(token));
+        localStorage.setItem("@kenzieHub:user", JSON.stringify(user));
 
         setAuthenticated(true);
 

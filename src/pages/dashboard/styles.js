@@ -7,11 +7,15 @@ export const Container = styled.div`
   text-align: center;
   align-items: center;
 
-  h1 {
+  .title {
     font-weight: 700;
-    margin-top: 10vh;
-    margin-bottom: 6vh;
+    margin: 10vh 0;
     font-size: 22px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
   }
 
   span {
@@ -22,11 +26,30 @@ export const Container = styled.div`
     font-size: 20px;
   }
 
-  a {
-    margin-top: 2vh;
+  input {
+    margin-bottom: 5vh;
+    height: 7vh;
+    border: none;
+    background-color: var(--grey0);
+    padding-left: 1vh;
+  }
+
+  p {
+    font-size: 12px;
+    width: 70vw;
+  }
+
+  .buttonTec {
+    margin-bottom: 20vh;
+  }
+
+  .buttonLogout {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: #403caa91;
+    width: 50%;
   }
 `;
-
 export const Content = styled.div`
   border: 1px solid var(--grey0);
   width: 90vw;
@@ -34,23 +57,4 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  input {
-    margin-top: 5vh;
-    height: 7vh;
-    border: none;
-    background-color: var(--grey0);
-    padding-left: 1vh;
-  }
-
-  button {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    max-width: 250px;
-  }
-
-  p {
-    font-size: 12px;
-    width: 70vw;
-  }
 `;

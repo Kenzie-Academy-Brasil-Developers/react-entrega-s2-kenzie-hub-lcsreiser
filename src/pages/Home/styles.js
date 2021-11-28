@@ -10,8 +10,8 @@ export const Container = styled.div`
   h1 {
     font-weight: 700;
     margin-top: 10vh;
-    margin-bottom: 6vh;
-    font-size: 18px;
+    margin-bottom: 20vh;
+    font-size: 22px;
   }
 
   span {
@@ -19,7 +19,7 @@ export const Container = styled.div`
     color: #fff;
     padding: 5px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
   }
 `;
 

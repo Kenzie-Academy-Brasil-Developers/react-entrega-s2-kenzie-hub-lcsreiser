@@ -51,7 +51,7 @@ const Signup = ({ authenticated }) => {
       .post("/users", user)
       .then((response) => {
         console.log(response.data);
-        return history.push("/");
+        return history.push("/login");
       })
       .catch((err) => console.log(err));
   };
