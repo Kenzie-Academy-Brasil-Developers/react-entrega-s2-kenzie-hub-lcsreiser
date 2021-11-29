@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import api from "../../services/api";
 import { Redirect, useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Login = ({ authenticated, setAuthenticated }) => {
   const schema = yup.object().shape({
@@ -22,6 +23,8 @@ const Login = ({ authenticated, setAuthenticated }) => {
   });
 
   const history = useHistory();
+
+  const [error, setError] = useState(false);
 
   const onSubmitFunction = (data) => {
     api
@@ -41,7 +44,10 @@ const Login = ({ authenticated, setAuthenticated }) => {
 
         return history.push("/dashboard");
       })
-      .catch((err) => console.log(err));
+      .catch((err) => {
+        console.log(err);
+        setError(true);
+      });
   };
 
   if (authenticated) {
@@ -64,6 +70,8 @@ const Login = ({ authenticated, setAuthenticated }) => {
             {...register("password")}
           />
           <p>{errors.password?.message}</p>
+          {error && <p className="error">E-mail ou senha incorretos</p>}
+
           <Button type="submit">Logar</Button>
         </form>
       </Content>

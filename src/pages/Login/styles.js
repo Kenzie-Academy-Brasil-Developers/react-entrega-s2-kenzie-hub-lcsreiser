@@ -53,4 +53,9 @@ export const Content = styled.div`
     font-size: 12px;
     width: 70vw;
   }
+
+  .error {
+    margin-top: 1vh;
+    color: var(--red);
+  }
 `;
